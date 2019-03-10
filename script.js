@@ -13,6 +13,7 @@ let dimensions = 16;
 let color = 'black';
 let random = false;
 createGrid(dimensions)
+let dimensions2 = 0;
 
 // Add Listener in buttons
 
@@ -27,9 +28,10 @@ clear.addEventListener('click', clearClick);
 function changeDimensions() {
 
     clearGrid()
+    divGrid.setAttribute('class', 'cursorGrid');
     dimensions2 = prompt('Enter the desired dimensions (A number up to 32): ');
-
-    if(dimensions2 === '') {
+    
+    if(dimensions2 === '' || dimensions2 === null) {
 
         clearGrid()
         createGrid(dimensions2 = dimensions);
@@ -59,6 +61,8 @@ function createGrid(value) {
 
     }
 
+    color = 'black';
+
 }
 
 function clearGrid() {
@@ -71,21 +75,26 @@ function clearGrid() {
 
 function blackColorClick() {
 
+    divGrid.setAttribute('class', 'cursorGrid');
+    random = false;
     color = 'black';
 
 }
 
 function randomColorsClick() {
 
+    divGrid.setAttribute('class', 'cursorGrid');
     random = true;
 
 }
 
 function eraseClick() {
     
+    divGrid.setAttribute('class', 'cursorGrid2');
     color = 'white';
     random = false;
     chosenColor();
+    
  
 }
 
@@ -94,6 +103,8 @@ function chosenColor() {
 
     if(random) {
         color = `rgb(${Math.random()*256},${Math.random()*256},${Math.random()*256})`;
+    } else if(color === undefined){
+        this.style.backgroundColor = 'black';
     }
 
     this.style.backgroundColor = color;
@@ -102,7 +113,13 @@ function chosenColor() {
 
 function clearClick() {
     clearGrid()
-    createGrid(dimensions);
+
+    if (dimensions2 !== 0 || dimensions2 !== null) {
+        createGrid(dimensions2);
+    } else {
+        createGrid(dimensions);
+    }
+    
 }
 
 
