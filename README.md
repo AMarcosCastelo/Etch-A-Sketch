@@ -1,3 +1,15 @@
-Hello! I'm Antonio Marcos and this is my Etch-A-Sketch for Web Development 101. From the curriculum of The Odin Project's <a href="http://www.theodinproject.com/courses/web-development-101/lessons/html-css">curriculum</a>
+# Etch-A-Sketck
 
-View in the Browser: <a href="https://amarcoscastelo.github.io/Etch-A-Sketch/"> Etch-A-Sketch </a>
+Hello! I'm Antonio Marcos and this is my **PROJECT: ETCH-A-SKETCH** from the curriculum of The Odin Project's 
+[curriculum](https://www.theodinproject.com/courses?ref=homenav).
+
+## Note:
+
+- Instructions: [PROJECT: ETCH-A-SKETCH](https://www.theodinproject.com/courses/web-development-101/lessons/etch-a-sketch-project)
+- Language:  
+**JavaScript: 47.9%.  
+HTML: 29.6%.  
+CSS: 70.4%.**
+- You can see this project through this link: [View in Browser](https://amarcoscastelo.github.io/Etch-A-Sketch/)
+
+
